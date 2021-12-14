@@ -7,7 +7,6 @@ module.exports =  {
   "username": process.env.user,
   "password": process.env.password,
   "database": process.env.database,
-  "timeout"      : 60 * 60 * 1000,
   "entities": [
      "dist/app/models/*.js"
   ],
@@ -18,7 +17,10 @@ module.exports =  {
     "migrationsDir": "src/database/migrations"
   },
   "insecureAuth": true,
- " multipleStatements": true 
+  "connectTimeout": 1500,
+  "extra": {
+   "connectionLimit": 5
+}
 
 }
 
