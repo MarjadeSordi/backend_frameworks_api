@@ -14,7 +14,7 @@ let Mercadoria = class Mercadoria {
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
-    __metadata("design:type", Object)
+    __metadata("design:type", String)
 ], Mercadoria.prototype, "uuid", void 0);
 __decorate([
     (0, typeorm_1.Column)(),

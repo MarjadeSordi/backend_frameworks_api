@@ -4,7 +4,7 @@ import {Entity, PrimaryGeneratedColumn, Column} from 'typeorm';
 
 class Mercadoria {
   @PrimaryGeneratedColumn('uuid') 
-  uuid!: string | undefined;
+  uuid!: string ;
   @Column()
   name!: string;
   @Column('int')

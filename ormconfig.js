@@ -15,7 +15,9 @@ module.exports =  {
   ],
   "cli": {
     "migrationsDir": "src/database/migrations"
-  }
+  },
+  "insecureAuth": true, 
+  "synchronize": true,
 }
 
 console.log('aqui2');
