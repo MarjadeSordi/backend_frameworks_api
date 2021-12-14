@@ -4,17 +4,17 @@ import {Entity, PrimaryGeneratedColumn, Column} from 'typeorm';
 
 class Mercadoria {
   @PrimaryGeneratedColumn('uuid') 
-  uuid: string;
+  uuid!: string | undefined;
   @Column()
-  name: string;
+  name!: string;
   @Column('int')
-  price: number;
+  price!: number;
   @Column()
-  categoria: string;
+  categoria!: string;
   @Column()
-  imagem: string;
+  imagem!: string;
   @Column()
-  tamanho: string; 
+  tamanho!: string; 
 }
 
 export default Mercadoria;

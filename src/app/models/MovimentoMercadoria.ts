@@ -4,17 +4,17 @@ import {Entity, Column} from 'typeorm';
 
 class MovimentoMercadoria {
   @Column({ primary: true })
-  id: number;
+  id!: number;
   @Column()
-  mercadoria: string;
+  mercadoria!: string;
   @Column('int')
-  price: number;
+  price!: number;
   @Column('int')
-  quantidade: number;
+  quantidade!: number;
   @Column('int')
-  total: number;
+  total!: number;
   @Column()
-  pagamento: string; 
+  pagamento!: string; 
 
 }
 
