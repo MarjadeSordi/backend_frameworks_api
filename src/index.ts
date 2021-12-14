@@ -10,4 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(routes);
 
-app.listen(3000, () => console.log('server start'));
+app.listen(process.env.PORT || 3000, () =>
+    console.log(`Iniciando o servidor na porta ${process.env.PORT}`)
+);
