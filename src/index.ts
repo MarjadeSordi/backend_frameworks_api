@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import express from 'express';
 import './database/connect';
-
+require("dotenv").config();
 const app = express();
 
 
@@ -20,4 +20,7 @@ app.use('/carrinho', carrinhoRota);
 const mercadoriaRota = require('./routesmercadorias');
 app.use('/mercadorias', mercadoriaRota);
 
-app.listen(3000, () => console.log('server start'));
+
+app.listen(process.env.PORT || 3000, () =>
+    console.log(`Iniciando o servidor na porta ${process.env.PORT}`)
+);
