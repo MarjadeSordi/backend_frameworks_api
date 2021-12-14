@@ -1,12 +1,23 @@
 import 'reflect-metadata';
 import express from 'express';
-import routes from './routes';
 import './database/connect';
 
 const app = express();
 
 
 app.use(express.json());
-app.use(routes);
+
+
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({
+    extended: true
+})) // for parsing application/x-www-form-urlencoded
+
+
+const carrinhoRota = require('./routescarrinho');
+app.use('/carrinho', carrinhoRota);
+
+const mercadoriaRota = require('./routesmercadorias');
+app.use('/mercadorias', mercadoriaRota);
 
 app.listen(3000, () => console.log('server start'));
