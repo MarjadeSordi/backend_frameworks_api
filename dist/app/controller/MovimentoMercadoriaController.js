@@ -45,6 +45,21 @@ class MovimentoMercadoriaController {
             }
         });
     }
+    buscarPorId(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const movimentoRepository = (0, typeorm_1.getRepository)(MovimentoMercadoria_1.default);
+            const id = req.params.id;
+            const mercadoria = yield movimentoRepository.findOne(id);
+            if (mercadoria) {
+                res.json(mercadoria);
+            }
+            else {
+                res.status(404).json({
+                    error: "Pedido nao encontrado"
+                });
+            }
+        });
+    }
     atualizar(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const movimentoRepository = (0, typeorm_1.getRepository)(MovimentoMercadoria_1.default);

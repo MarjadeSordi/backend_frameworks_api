@@ -10,6 +10,7 @@ const routes = (0, express_1.Router)();
 routes.get('/', MovimentoMercadoriaController_1.default.listar);
 routes.post('/', MovimentoMercadoriaController_1.default.inserir);
 routes.get('/find', MovimentoMercadoriaController_1.default.buscarPorName);
+routes.get('/:id', MovimentoMercadoriaController_1.default.buscarPorId);
 routes.put('/editar', MovimentoMercadoriaController_1.default.atualizar);
 routes.delete('/excluir', MovimentoMercadoriaController_1.default.deletar);
 module.exports = routes;
