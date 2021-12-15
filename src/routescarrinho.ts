@@ -9,6 +9,7 @@ const routes = Router();
 routes.get('/', MovimentoMercadoriaController.listar);
 routes.post('/', MovimentoMercadoriaController.inserir);
 routes.get('/find', MovimentoMercadoriaController.buscarPorName);
+routes.get('/:id', MovimentoMercadoriaController.buscarPorId)
 routes.put('/editar', MovimentoMercadoriaController.atualizar);
 routes.delete('/excluir', MovimentoMercadoriaController.deletar);
 

@@ -32,6 +32,20 @@ async buscarPorName (req: Request, res: Response)  {
   }
 }
 
+async buscarPorId (req: Request, res: Response)  { 
+  const movimentoRepository = getRepository(MovimentoMercadoria)        
+  const id = req.params.id;
+  const mercadoria = await movimentoRepository.findOne(id);
+  if(mercadoria) { 
+      res.json(mercadoria);
+  }
+  else {
+      res.status(404).json({
+          error: "Pedido nao encontrado"
+      });
+  }
+}
+
 async atualizar (req: Request, res: Response)  { 
   const movimentoRepository = getRepository(MovimentoMercadoria)    
   const mercadoriaReq = req.query;

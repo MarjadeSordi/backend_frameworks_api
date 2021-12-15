@@ -7,4 +7,5 @@ routes.get('/', MercadoriaController.listar)
 routes.post('/', MercadoriaController.inserir)
 routes.get("/find", MercadoriaController.buscarPorName);
 
+
 module.exports = routes;
