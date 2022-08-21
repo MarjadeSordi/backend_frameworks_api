@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 
-//testando//
+
 app.use(express.urlencoded({
     extended: true
 })) // for parsing application/x-www-form-urlencoded
